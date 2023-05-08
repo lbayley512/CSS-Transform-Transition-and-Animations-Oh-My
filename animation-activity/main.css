@@ -27,6 +27,7 @@ body  {
   height: 10px;
   width: 70%;
   margin: auto;
+  
 }
 
 li {
@@ -41,4 +42,32 @@ a {
 }
 a:hover {
   color: ghostwhite;
+  
+}
+.hamburger:hover #top{
+  animation-name: down;
+  animation-duration: 1s;
+}
+.hamburger:hover #bottom{
+  animation-name: up;
+  animation-duration: 1s;
+}
+
+.hamburger:hover #middle{
+  animation-name: dissapear;
+  animation-duration: .5s;
+}
+@keyframes down{
+  0% {transform: rotate(0turn) translate(0px,0px)}
+  100% {transform: rotate(45deg) translate(25px,25px)}
+}
+
+
+@keyframes up{
+  0% {transform: translate(0deg, 0deg) }
+  100% {transform: translate(0px, -30px) rotate(-45deg);}
+}
+@keyframes dissapear{
+  0% {opacity: 1}
+  100%{opacity: 0}
 }
